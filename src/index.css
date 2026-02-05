@@ -40,12 +40,15 @@ body {
   background-size: cover;
 }
 
-.page-title {
+h1,
+h2,
+h3 {
   font-family: "Instrument Serif", serif;
   font-weight: 400;
   font-size: 100px;
   font-style: normal;
-  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0;
 
   background-image: linear-gradient(to bottom,
       #0e1c29 30%,
@@ -59,4 +62,12 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
 }

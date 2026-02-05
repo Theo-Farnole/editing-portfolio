@@ -1,6 +1,5 @@
 #root {
-  width: 100%;
-  margin: 0 auto;
+  width: calc(100% - 4rem);
   padding: 2rem;
   text-align: center;
 }
@@ -11,4 +10,28 @@
 
 .thumbnail-carousel .splide__slide {
   max-width: 500px;
+}
+
+.main-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.punchline {
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.category-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.category-section .thumbnails-container {
+  /* display in grid with 3 columns and 20px gap */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
 }

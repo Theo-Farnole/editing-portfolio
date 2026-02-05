@@ -14,6 +14,7 @@ export const thumbnails: {
     tasawarNaim: ThumbnailData;
     cisse: ThumbnailData;
     etinMbb: ThumbnailData;
+    thealFossiles: ThumbnailData;
 } = {
     etinAsafa: {
         link: "https://www.youtube.com/watch?v=ch9TQ8KUuVU",
@@ -24,6 +25,7 @@ export const thumbnails: {
         link: "https://www.youtube.com/watch?v=WGy-2wUs4IY",
         title: "10 IMPOSTEURS VS LAHIFUX : QUI FAIT VRAIMENT DU JJB ? #​2",
         thumbnail: "thumbnails/tasawar-lahifa.jpg"
+
     },
     thealKayak: {
         link: "https://www.youtube.com/watch?v=TAZummnPVlM",
@@ -34,6 +36,11 @@ export const thumbnails: {
         link: "https://www.youtube.com/watch?v=l0_nckWW-o4",
         title: "Recréer un instrument VIKING oublié (sans expérience)",
         thumbnail: "thumbnails/theal-talharpa.jpg"
+    },
+    thealFossiles: {
+        link: "https://www.youtube.com/watch?v=ILLzjHAkCjE",
+        title: "On découvre des fossiles en Ardèche ! (ft Hugo L'escalier)",
+        thumbnail: "thumbnails/theal-fossiles.jpg"
     },
     manu: {
         link: "https://www.youtube.com/watch?v=ejti9yysFiE",
