@@ -6,11 +6,11 @@ export type ThumbnailData = {
 
 export const thumbnails: {
     etinAsafa: ThumbnailData;
-    asafaLahifa: ThumbnailData;
     thealKayak: ThumbnailData;
     thealTalharpa: ThumbnailData;
     manu: ThumbnailData;
     coraille: ThumbnailData;
+    tasawarLahifa: ThumbnailData;
     tasawarNaim: ThumbnailData;
     cisse: ThumbnailData;
     etinMbb: ThumbnailData;
@@ -20,7 +20,7 @@ export const thumbnails: {
         title: "La malédiction du sprinter qui devait tout gagner",
         thumbnail: "thumbnails/etin-powell.jpg"
     },
-    asafaLahifa: {
+    tasawarLahifa: {
         link: "https://www.youtube.com/watch?v=WGy-2wUs4IY",
         title: "10 IMPOSTEURS VS LAHIFUX : QUI FAIT VRAIMENT DU JJB ? #​2",
         thumbnail: "thumbnails/tasawar-lahifa.jpg"

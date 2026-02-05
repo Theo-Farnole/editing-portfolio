@@ -1,33 +1,14 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.horizontalScroll {
-  overflow: hidden;
+.thumbnail-carousel {
+  width: 100% !important;
 }
 
-.horizontalScroll .scrollContent {
-  display: flex;
-  flex-direction: row;
-  flex: 0 1 auto;
-  gap: 20px;
-
-  animation: scrollAnim 1s linear infinite;
-}
-
-.horizontalScroll .scrollContent .thumbnail {
-  flex: 0 0 auto;
-}
-
-@keyframes scrollAnim {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
+.thumbnail-carousel .splide__slide {
+  max-width: 500px;
 }

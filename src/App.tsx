@@ -1,13 +1,26 @@
 // import reactLogo from './assets/react.svg'
 import './App.css'
 import Thumbnail from './Components/Thumbnail'
-import { allThumbnails } from './thumbnail'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { allThumbnails, thumbnails } from './thumbnail'
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 
 function App() {
 
+  const splideOptions = {
+    type: "loop", // Loop back to the beginning when reaching the end
+    autoScroll: {
+      pauseOnHover: false, // Do not pause scrolling when hovering over the carousel
+      pauseOnFocus: false, // Do not pause scrolling when the carousel is focused
+      rewind: true, // Rewind to start when the end is reached
+      speed: 0.3 // Scrolling speed
+    },
+    arrows: false, // Hide navigation arrows
+    pagination: false, // Hide pagination dots        
+    gap: "1rem", // Space between slides
+  };
 
   return (
     <>
@@ -16,32 +29,17 @@ function App() {
         Monteur vidéo
       </h1>
 
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
+      {/* <Thumbnail {...thumbnails.tasawarLahifa} /> */}
+
+      <Splide className="thumbnail-carousel" options={splideOptions} extensions={{ AutoScroll }}>
         {
           allThumbnails.map((t) =>
-            <SwiperSlide>
+            <SplideSlide>
               <Thumbnail {...t} />
-            </SwiperSlide>
+            </SplideSlide>
           )
         }
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-      </Swiper>
-
-      {/* <div className='horizontalScroll'>
-        <div className='scrollContent'>
-          {
-            allThumbnails.map((t) => <Thumbnail {...t} />)
-          }
-        </div>
-      </div> */}
+      </Splide>
     </>
   )
 }
