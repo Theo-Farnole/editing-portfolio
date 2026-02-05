@@ -15,6 +15,11 @@
   max-width: 500px;
 }
 
+.thumbnail-carousel .splide__track {
+  overflow: visible;
+  /* j'en ai besoin pour ne pas cut le dropshadow*/
+}
+
 .main-title {
   margin-top: 50px;
   margin-bottom: 50px;
