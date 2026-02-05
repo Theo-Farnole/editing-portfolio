@@ -5,7 +5,10 @@
 }
 
 .thumbnail-carousel {
-  width: 100% !important;
+  width: 100vw !important;
+  margin-left: -2rem;
+  margin-right: -2rem;
+
 }
 
 .thumbnail-carousel .splide__slide {
@@ -21,6 +24,7 @@
   height: 200px;
   display: flex;
   align-items: center;
+  padding: 2rem;
 }
 
 .category-section {
@@ -28,10 +32,13 @@
   margin-bottom: 50px;
 }
 
+.category-section h3 {
+  margin-bottom: 20px;
+}
+
 .category-section .thumbnails-container {
   /* display in grid with 3 columns and 20px gap */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-
 }
