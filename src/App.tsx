@@ -6,6 +6,16 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 
+/**
+ * TODO :
+ * - Faire style de la la punchline
+ * - Ajouter une section "à propos de moi" avec une photo et un texte de présentation
+ * - Ajouter une section "avis clients" avec des témoignages de clients satisfaits
+ * - Reprendre style global (trop flat, pas assez de personnalité)
+ * - Ajouter des animations (ex: faire apparaître les thumbnails avec une animation, ajouter un hover sur les thumbnails, etc.)
+ * - Ajouter un footer avec les réseaux sociaux et les coordonnées
+ * - Faire le style sur desktop
+ */
 
 function App() {
 
