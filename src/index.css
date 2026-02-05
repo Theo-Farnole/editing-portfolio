@@ -31,7 +31,7 @@ body {
   font-family: "Inter", serif;
 
 
-  background: radial-gradient(ellipse at top, #ebedee, #c6d8e4);
+  background: radial-gradient(ellipse at top, #ebedee, #ebedee);
 }
 
 h1,
@@ -64,4 +64,49 @@ h2 {
 
 h3 {
   font-size: 30px;
+}
+
+.glow-text {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 800;
+
+  /* Texte en gradient */
+  background: linear-gradient(90deg,
+      #d6e6f2,
+      #8fb3cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow derrière */
+.glow-text::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(90deg,
+      #9ecfff,
+      #6fa8dc);
+
+  filter: blur(28px);
+  opacity: 0.55;
+  z-index: -1;
+
+  animation: glowFloat 6s ease-in-out infinite;
+}
+
+/* Mouvement très subtil */
+@keyframes glowFloat {
+  0% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  100% {
+    transform: translateX(-4px);
+  }
 }

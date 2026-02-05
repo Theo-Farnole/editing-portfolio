@@ -55,9 +55,11 @@ function App() {
 
   return (
     <>
+      <img src="img/profile.webp" alt="Profile" className="profile-picture no-body-padding" />
+
       <div className="main-title">
-        <h1>Gweron</h1>
-        <h2>Monteur vidéo</h2>
+        <h1 data-text="Gweron">Gweron</h1>
+        <h2 data-text="Monteur vidéo">Monteur vidéo</h2>
       </div>
 
       <div className='punchline'>
@@ -66,9 +68,7 @@ function App() {
         </p>
       </div>
 
-      {/* <Thumbnail {...thumbnails.tasawarLahifa} /> */}
-
-      <Splide className="thumbnail-carousel" options={splideOptions} extensions={{ AutoScroll }}>
+      <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
         {
           allThumbnails.map((t) =>
             <SplideSlide key={t.link}>
@@ -78,16 +78,28 @@ function App() {
         }
       </Splide>
 
-      {
-        Object.entries(categories).map(([categoryName, thumbnails]) => (
-          <div key={categoryName} className="category-section">
-            <h3>{categoryName}</h3>
-            <div className="thumbnails-container">
-              {thumbnails.map(t => <Thumbnail key={t.link} {...t} />)}
+      <div className='about-me no-body-padding'>
+        Test + arguments marketing + réseaux
+      </div>
+
+      <div className='about-me no-body-padding'>
+        Avis clients
+      </div>
+
+      <div className='categories'>
+
+        <h2>Mes réalisations</h2>
+        {
+          Object.entries(categories).map(([categoryName, thumbnails]) => (
+            <div key={categoryName} className="category-section">
+              <h3>{categoryName}</h3>
+              <div className="thumbnails-container">
+                {thumbnails.map(t => <Thumbnail key={t.link} {...t} />)}
+              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </>
   )
 }

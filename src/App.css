@@ -1,23 +1,31 @@
 #root {
-  width: calc(100% - 4rem);
-  padding: 2rem;
   text-align: center;
+  padding-bottom: 50px;
+  width: 100vw !important;
+  overflow-x: hidden;
 }
 
-.thumbnail-carousel {
-  width: 100vw !important;
-  margin-left: -2rem;
-  margin-right: -2rem;
 
+.profile-picture {
+  margin-top: -2rem;
+  height: 25vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: 50% 10%;
 }
 
 .thumbnail-carousel .splide__slide {
   max-width: 500px;
 }
 
+.about-me {
+  background-color: red;
+}
+
 .thumbnail-carousel .splide__track {
-  overflow: visible;
   /* j'en ai besoin pour ne pas cut le dropshadow*/
+  overflow: visible;
+  padding: 2rem 0;
 }
 
 .main-title {
@@ -32,9 +40,17 @@
   padding: 2rem;
 }
 
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .category-section {
   margin-top: 50px;
   margin-bottom: 50px;
+
+  margin: 0 2rem;
 }
 
 .category-section h3 {
