@@ -8,7 +8,6 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 /**
  * TODO :
- * - Ajouter une section "à propos de moi" avec une photo et un texte de présentation
  * - Ajouter une section "avis clients" avec des témoignages de clients satisfaits
  * - Reprendre style global (trop flat, pas assez de personnalité)
  * - Ajouter des animations (ex: faire apparaître les thumbnails avec une animation, ajouter un hover sur les thumbnails, etc.)
@@ -64,8 +63,6 @@ function App() {
 
   return (
     <>
-      <img src="img/profile.webp" alt="Profile" className="profile-picture no-body-padding" />
-
       <div className="main-title">
         <h1 data-text="Gweron">Gweron</h1>
         <h2 data-text="Monteur vidéo">Monteur vidéo</h2>
@@ -89,13 +86,30 @@ function App() {
         }
       </Splide>
 
-      <div className='about-me no-body-padding'>
-        Test + arguments marketing + réseaux
-      </div>
+      <div className="empty-space"></div>
 
       <div className='about-me no-body-padding'>
-        Avis clients
+        <h2>Mon approche</h2>
+
+
+
+        <p>
+          Faire une belle vidéo, c’est facile.<br />
+          Faire une vidéo que les gens regardent jusqu’au bout, c’est autre chose.<br />
+          <br />
+          <b>Monteur vidéo spécialisé YouTube</b>, je construis des vidéos pensées pour performer.<br />
+          <br />
+          Hook fort dès les premières secondes<br />
+          Rythme maîtrisé<br />
+          Relances visuelles<br />
+          Structure optimisée pour la rétention<br />
+          <br />
+          Chaque choix de montage sert un objectif :<br />
+          <b>garder l’attention et maximiser l’impact.</b>
+        </p>
       </div>
+
+      <div className="empty-space"></div>
 
       <div className='categories'>
 

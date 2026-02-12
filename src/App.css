@@ -18,8 +18,9 @@
   max-width: 500px;
 }
 
-.about-me {
-  background-color: red;
+.about-me p {
+  text-align: left;
+  padding: 0 2rem;
 }
 
 .thumbnail-carousel .splide__track {

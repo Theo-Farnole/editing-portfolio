@@ -100,6 +100,10 @@ h3 {
   animation: glowFloat 6s ease-in-out infinite;
 }
 
+.empty-space {
+  margin: 60px 0;
+}
+
 /* Mouvement très subtil */
 @keyframes glowFloat {
   0% {
