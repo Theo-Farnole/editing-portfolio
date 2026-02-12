@@ -8,7 +8,6 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 /**
  * TODO :
- * - Faire style de la la punchline
  * - Ajouter une section "à propos de moi" avec une photo et un texte de présentation
  * - Ajouter une section "avis clients" avec des témoignages de clients satisfaits
  * - Reprendre style global (trop flat, pas assez de personnalité)
@@ -72,7 +71,9 @@ function App() {
         <h2 data-text="Monteur vidéo">Monteur vidéo</h2>
       </div>
 
-      <div className='punchline'>
+      <hr className="separator" />
+
+      <div className='punchline gradient-title'>
         <p>
           Transformez vos rushs en vidéos claires, rythmées et mémorables !<br />
         </p>

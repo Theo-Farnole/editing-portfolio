@@ -36,10 +36,10 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+.gradient-title {
   font-family: "Instrument Serif", serif;
   font-weight: 400;
-  font-size: 100px;
   font-style: normal;
   margin-top: 0;
   margin-bottom: 0;
@@ -56,6 +56,10 @@ h3 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 100px;
 }
 
 h2 {
