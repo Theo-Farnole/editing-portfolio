@@ -1,0 +1,41 @@
+.client-opinion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    padding: 20px 20px 10px 20px;
+    max-width: 500px;
+
+    background-color: #f6fbff;
+
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "avatar name"
+        "content content";
+    gap: 10px;
+    align-items: center;
+}
+
+.avatar {
+    grid-area: avatar;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    grid-area: name;
+    font-weight: bold;
+}
+
+.content {
+    grid-area: content;
+}

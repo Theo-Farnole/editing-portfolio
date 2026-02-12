@@ -1,7 +1,8 @@
 // import reactLogo from './assets/react.svg'
 import './App.css'
+import ClientOpinion from './Components/ClientOpinion';
 import Thumbnail from './Components/Thumbnail'
-import { allThumbnails, thumbnails } from './thumbnail'
+import { allThumbnails, clientsOpinion, thumbnails } from './const'
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
@@ -10,14 +11,14 @@ import "@splidejs/splide/dist/css/splide.min.css";
  * TODO :
  * - Ajouter une section "avis clients" avec des témoignages de clients satisfaits
  * - Reprendre style global (trop flat, pas assez de personnalité)
- * - Ajouter des animations (ex: faire apparaître les thumbnails avec une animation, ajouter un hover sur les thumbnails, etc.)
- * - Ajouter un footer avec les réseaux sociaux et les coordonnées
+ * - Ajouter des animations (ex: faire apparaître les thumbnails & les titres avec une animation quand je scroll)
+ * - Ajouter une section me contacter avec les réseaux sociaux et les coordonnées
  * - Faire le style sur desktop
  */
 
 function App() {
 
-  const categories = {
+  const mesRealisations = {
     "Jeux multicam": [
       thumbnails.tasawarLahifa,
       thumbnails.tasawarNaim
@@ -39,11 +40,11 @@ function App() {
     ],
   }
 
-  if (Object.values(categories).flat().length != allThumbnails.length) {
+  if (Object.values(mesRealisations).flat().length != allThumbnails.length) {
     console.warn("Tous les thumbnails ne sont pas catégorisés !")
 
     // Affiche les thumbnails non catégorisés
-    const categorizedThumbnails = new Set(Object.values(categories).flat());
+    const categorizedThumbnails = new Set(Object.values(mesRealisations).flat());
     const uncategorizedThumbnails = allThumbnails.filter(t => !categorizedThumbnails.has(t));
     console.warn("Thumbnails non catégorisés :", uncategorizedThumbnails);
   }
@@ -91,8 +92,6 @@ function App() {
       <div className='about-me no-body-padding'>
         <h2>Mon approche</h2>
 
-
-
         <p>
           Faire une belle vidéo, c’est facile.<br />
           Faire une vidéo que les gens regardent jusqu’au bout, c’est autre chose.<br />
@@ -111,11 +110,27 @@ function App() {
 
       <div className="empty-space"></div>
 
+      <div className='reviews no-body-padding'>
+        <h2>Ce qu'en disent mes clients</h2>
+
+        <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
+          {
+            clientsOpinion.map((t) =>
+              <SplideSlide key={t.clientName}>
+                <ClientOpinion {...t} />
+              </SplideSlide>
+            )
+          }
+        </Splide>
+      </div>
+
+      <div className="empty-space"></div>
+
       <div className='categories'>
 
         <h2>Mes réalisations</h2>
         {
-          Object.entries(categories).map(([categoryName, thumbnails]) => (
+          Object.entries(mesRealisations).map(([categoryName, thumbnails]) => (
             <div key={categoryName} className="category-section">
               <h3>{categoryName}</h3>
               <div className="thumbnails-container">
