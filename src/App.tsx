@@ -10,10 +10,8 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 /**
  * TODO :
- * - Ajouter une section "avis clients" avec des témoignages de clients satisfaits
- * - Reprendre style global (trop flat, pas assez de personnalité)
- * - Ajouter des animations (ex: faire apparaître les thumbnails & les titres avec une animation quand je scroll)
  * - Ajouter une section me contacter avec les réseaux sociaux et les coordonnées
+ * - Ajouter des animations (ex: faire apparaître les thumbnails & les titres avec une animation quand je scroll)
  * - Faire le style sur desktop
  */
 
