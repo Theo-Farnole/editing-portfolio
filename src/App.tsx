@@ -65,19 +65,28 @@ function App() {
 
   return (
     <>
-      <div className="main-title">
-        <h1 data-text="Gweron">Gweron</h1>
-        <h2 data-text="Monteur vidéo">Monteur vidéo</h2>
+      <header>
+        <p className='title'>Gweron</p>
+      </header>
+
+      <div className="fullpage">
+        <div className='hero-layout'>
+
+
+          <div className='punchline'>
+            Je transforme vos rushs en vidéos qui <span className="underline">captivent</span>.
+          </div>
+
+          <p className='sub-punchline'>
+            Plus de rétention. Plus de croissance.
+          </p>
+
+          <img className="down-arrow" src="img/down-arrow.png" />
+        </div>
       </div>
 
-      <hr className="separator" />
 
-      <div className='punchline gradient-title'>
-        <p>
-          Transformez vos rushs en vidéos claires, rythmées et mémorables !<br />
-        </p>
-      </div>
-
+      {/* 
       <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
         {
           allThumbnails.map((t) =>
@@ -86,16 +95,33 @@ function App() {
             </SplideSlide>
           )
         }
-      </Splide>
-
-      <div className="empty-space"></div>
+      </Splide> */}
 
       <div className='about-me no-body-padding'>
-        <h2>Mon approche</h2>
+        <h2>Pourquoi me choisir ?</h2>
 
-        <p>
-          Faire une belle vidéo, c’est facile.<br />
-          Faire une vidéo que les gens regardent jusqu’au bout, c’est autre chose.<br />
+        <div>
+          <div className='experience'>
+            <p className='main-number'>3+</p>
+            <p className='label'>Années d'expérience</p>
+            <p className='description'>Je maîtrise les codes et les tendances de Youtube pour créer des vidéos qui performent.</p>
+          </div>
+
+          <div className='experience'>
+            <p className='main-number'>999</p>
+            <p className='label'>vidéos montées</p>
+            <p className='description'>Des formats longs pensés pour performer.</p>
+          </div>
+
+          <div className='experience'>
+            <p className='main-number'>999 999</p>
+            <p className='label'>vues cumulées</p>
+            <p className='description'>Des vidéos conçues pour maximiser le watch time et le taux de clic.</p>
+          </div>
+        </div>
+
+
+        {/* <p>
           <br />
           <b>Monteur vidéo spécialisé YouTube</b>, je construis des vidéos pensées pour performer.<br />
           <br />
@@ -106,12 +132,11 @@ function App() {
           <br />
           Chaque choix de montage sert un objectif :<br />
           <b>garder l’attention et maximiser l’impact.</b>
-        </p>
-      </div>
+        </p> */}
+      </div >
 
-      <div className="empty-space"></div>
 
-      <div className='reviews no-body-padding'>
+      {/* <div className='reviews no-body-padding'>
         <h2>Ce qu'en disent mes clients</h2>
 
         <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
@@ -123,7 +148,7 @@ function App() {
             )
           }
         </Splide>
-      </div>
+      </div> */}
 
       <div className="empty-space"></div>
 

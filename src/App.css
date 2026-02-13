@@ -5,28 +5,122 @@
   overflow-x: hidden;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-.profile-picture {
-  margin-top: -2rem;
-  height: 25vh;
+  display: flex;
+  /* 
+  background-color: red; */
   width: 100vw;
-  object-fit: cover;
-  object-position: 50% 10%;
+
+  color: white;
+}
+
+header .title {
+  text-align: left;
+  font-size: 1.8rem;
+  margin: 20px 2rem;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  flex: 0 0 auto;
+}
+
+.fullpage {
+  height: 100vh;
+
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .85) 50%, rgba(0, 0, 0, 0.6) 100%),
+    url("img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Figtree", sans-serif;
+}
+
+
+
+.hero-layout .punchline {
+  font-size: 2.5rem;
+  font-weight: 600;
+
+  padding: 1rem;
+  padding-bottom: 0;
+
+
+  text-shadow:
+    0 0px 24px rgba(14, 28, 41, 0.4),
+    0 0px 4px rgba(94, 120, 143, 0.3);
+}
+
+.hero-layout .punchline .underline {
+  /* background-image: url("img/underline.svg");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: auto; */
+  /* font-style: italic; */
+  font-weight: bold;
+}
+
+.hero-layout .sub-punchline {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.hero-layout .down-arrow {
+  width: 40px
 }
 
 .thumbnail-carousel .splide__slide {
   max-width: 500px;
 }
 
-.about-me p {
-  text-align: left;
-  padding: 0 2rem;
+.about-me {
+  padding: 3rem 2rem;
+  background-color: #f3F3F3;
 }
 
-.thumbnail-carousel .splide__track {
-  /* j'en ai besoin pour ne pas cut le dropshadow*/
-  overflow: visible;
-  padding: 2rem 0;
+.about-me h2 {
+  margin-bottom: 20px;
+}
+
+.about-me .experience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.about-me>div {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+}
+
+.about-me .experience * {
+  margin: 0;
+}
+
+.about-me .experience .main-number {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about-me .experience .label {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.about-me .experience .description {
+  font-size: 0.9rem;
+  color: #5e788f;
 }
 
 .main-title {
@@ -39,18 +133,6 @@
   border: none;
   height: 1px;
   background: linear-gradient(to right, transparent, #5e788f, transparent);
-}
-
-.punchline {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  padding: 0rem;
-  font-size: 1.5rem;
-
-  text-shadow:
-    0 0px 24px rgba(14, 28, 41, 0.4),
-    0 0px 4px rgba(94, 120, 143, 0.3);
 }
 
 .categories {
