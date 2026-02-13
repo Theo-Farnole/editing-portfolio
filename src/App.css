@@ -103,9 +103,6 @@ header .title {
   width: 40px
 }
 
-.thumbnail-carousel .splide__slide {
-  max-width: 500px;
-}
 
 section {
   padding: 3rem 0;
