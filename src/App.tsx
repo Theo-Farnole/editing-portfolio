@@ -81,6 +81,10 @@ function App() {
             Plus de rétention. Plus de croissance.
           </p>
 
+          <button className='cta-button'>
+            Discuter de mon projet
+          </button>
+
           <img className="down-arrow" src="img/down-arrow.png" />
         </div>
       </div>
@@ -166,6 +170,10 @@ function App() {
           ))
         }
       </div>
+
+      <footer>
+        <p className="name">Gweron</p>
+      </footer>
     </>
   )
 }

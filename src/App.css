@@ -1,6 +1,5 @@
 #root {
   text-align: center;
-  padding-bottom: 50px;
   width: 100vw !important;
   overflow-x: hidden;
 }
@@ -57,6 +56,24 @@ header .title {
   text-shadow:
     0 0px 24px rgba(14, 28, 41, 0.4),
     0 0px 4px rgba(94, 120, 143, 0.3);
+}
+
+.cta-button {
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+
+  box-shadow:
+    0 0 0px rgba(255, 255, 255, 0),
+    0 0 20px rgba(255, 255, 255, 0.25);
+
+  font-family: "Figtree", sans-serif;
 }
 
 .hero-layout .punchline .underline {
@@ -157,4 +174,19 @@ header .title {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 1rem 0;
+  width: 100vw;
+}
+
+footer .name {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-size: 2rem;
 }
