@@ -1,4 +1,4 @@
-import type { ThumbnailData } from '../thumbnail'
+import type { ThumbnailData } from '../types'
 import './Thumbnail.css'
 
 
