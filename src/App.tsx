@@ -127,19 +127,15 @@ function App() {
 
 
       <section className='reviews no-body-padding'>
-        <h2>Ce qu'en disent mes clients</h2>
-
-        <div>
-          <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
-            {
-              clientsOpinion.map((t) =>
-                <SplideSlide key={t.clientName}>
-                  <ClientOpinion {...t} />
-                </SplideSlide>
-              )
-            }
-          </Splide>
-        </div>
+        <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
+          {
+            clientsOpinion.map((t) =>
+              <SplideSlide key={t.clientName}>
+                <ClientOpinion {...t} />
+              </SplideSlide>
+            )
+          }
+        </Splide>
       </section>
 
       <section className='categories'>

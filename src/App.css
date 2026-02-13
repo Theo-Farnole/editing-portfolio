@@ -85,6 +85,15 @@ header .title {
   font-weight: bold;
 }
 
+.splide,
+.splide__track,
+.splide__list,
+.splide__slide {
+  overflow: visible !important;
+}
+
+
+
 .hero-layout .sub-punchline {
   font-size: 1.2rem;
   padding: 1rem 0;

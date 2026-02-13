@@ -1,18 +1,20 @@
 import type { ClientOpinionData } from '../types'
 import './ClientOpinion.css'
+import FiveStars from './FiveStars'
 
 
-function ClientOpinion({ clientName, review, clientPicture }: ClientOpinionData) {
+function ClientOpinion({ clientName, review }: ClientOpinionData) {
 
 
     return <div className='client-opinion'>
 
-        <img className="avatar" src={clientPicture} />
-        <p className='name'>{clientName}</p>
+        <FiveStars />
 
         <div className='content'>
             {review}
         </div>
+
+        <p className='name'>{clientName}</p>
     </ div>
 }
 
