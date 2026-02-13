@@ -183,6 +183,8 @@ footer {
   margin-bottom: 0;
   padding: 1rem 0;
   width: 100vw;
+
+  border-radius: 5px 5px 0 0;
 }
 
 footer .name {
