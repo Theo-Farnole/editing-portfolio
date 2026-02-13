@@ -101,7 +101,7 @@ function App() {
         }
       </Splide> */}
 
-      <div className='about-me no-body-padding'>
+      <section className='about-me no-body-padding'>
         <h2>Pourquoi me choisir ?</h2>
 
         <div>
@@ -123,40 +123,26 @@ function App() {
             <p className='description'>Des vidéos conçues pour maximiser le watch time et le taux de clic.</p>
           </div>
         </div>
+      </section >
 
 
-        {/* <p>
-          <br />
-          <b>Monteur vidéo spécialisé YouTube</b>, je construis des vidéos pensées pour performer.<br />
-          <br />
-          Hook fort dès les premières secondes<br />
-          Rythme maîtrisé<br />
-          Relances visuelles<br />
-          Structure optimisée pour la rétention<br />
-          <br />
-          Chaque choix de montage sert un objectif :<br />
-          <b>garder l’attention et maximiser l’impact.</b>
-        </p> */}
-      </div >
-
-
-      {/* <div className='reviews no-body-padding'>
+      <section className='reviews no-body-padding'>
         <h2>Ce qu'en disent mes clients</h2>
 
-        <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
-          {
-            clientsOpinion.map((t) =>
-              <SplideSlide key={t.clientName}>
-                <ClientOpinion {...t} />
-              </SplideSlide>
-            )
-          }
-        </Splide>
-      </div> */}
+        <div>
+          <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
+            {
+              clientsOpinion.map((t) =>
+                <SplideSlide key={t.clientName}>
+                  <ClientOpinion {...t} />
+                </SplideSlide>
+              )
+            }
+          </Splide>
+        </div>
+      </section>
 
-      <div className="empty-space"></div>
-
-      <div className='categories'>
+      <section className='categories'>
 
         <h2>Mes réalisations</h2>
         {
@@ -169,7 +155,7 @@ function App() {
             </div>
           ))
         }
-      </div>
+      </section>
 
       <footer>
         <p className="name">Gweron</p>

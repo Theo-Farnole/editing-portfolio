@@ -71,7 +71,7 @@ header .title {
 
   box-shadow:
     0 0 0px rgba(255, 255, 255, 0),
-    0 0 20px rgba(255, 255, 255, 0.25);
+    0 0 40px rgba(255, 255, 255, .5);
 
   font-family: "Figtree", sans-serif;
 }
@@ -98,13 +98,18 @@ header .title {
   max-width: 500px;
 }
 
-.about-me {
-  padding: 3rem 2rem;
-  background-color: #f3F3F3;
+section {
+  padding: 3rem 0;
 }
 
-.about-me h2 {
+section h2 {
   margin-bottom: 20px;
+}
+
+.about-me {
+  background-color: #f3F3F3;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .about-me .experience {
@@ -139,6 +144,8 @@ header .title {
   font-size: 0.9rem;
   color: #5e788f;
 }
+
+.reviews {}
 
 .main-title {
   margin-top: 30px;
