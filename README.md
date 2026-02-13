@@ -73,3 +73,13 @@ export default defineConfig([
   },
 ])
 ```
+
+
+```
+.text-span-underline {
+    background-image: url(https://cdn.prod.website-files.com/65dcda3…/65e0f3e…_Sous%20lignage2.svg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+```
