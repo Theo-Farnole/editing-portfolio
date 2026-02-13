@@ -3,6 +3,7 @@ import './App.css'
 import ClientOpinion from './Components/ClientOpinion';
 import Thumbnail from './Components/Thumbnail'
 import { allThumbnails, clientsOpinion, thumbnails } from './const'
+// @ts-expect-error - splide exports typings issue
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
