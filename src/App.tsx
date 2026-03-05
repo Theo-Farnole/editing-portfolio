@@ -48,6 +48,7 @@ function App() {
     console.warn("Thumbnails non catégorisés :", uncategorizedThumbnails);
   }
 
+  // @ts-ignore
   const splideOptions = {
     type: "loop", // Loop back to the beginning when reaching the end
     autoScroll: {
