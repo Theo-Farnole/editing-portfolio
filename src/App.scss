@@ -15,15 +15,15 @@ header {
   width: 100vw;
 
   color: white;
-}
 
-header .title {
-  text-align: left;
-  font-size: 1.8rem;
-  margin: 20px 2rem;
-  font-family: "Instrument Serif", serif;
-  font-weight: 400;
-  flex: 0 0 auto;
+  .title {
+    text-align: left;
+    font-size: 1.8rem;
+    margin: 20px 2rem;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    flex: 0 0 auto;
+  }
 }
 
 .fullpage {
@@ -45,17 +45,32 @@ header .title {
 
 
 
-.hero-layout .punchline {
-  font-size: 2.5rem;
-  font-weight: 600;
+.hero-layout {
+  .punchline {
+    font-size: 2.5rem;
+    font-weight: 600;
 
-  padding: 1rem;
-  padding-bottom: 0;
+    padding: 1rem;
+    padding-bottom: 0;
 
 
-  text-shadow:
-    0 0px 24px rgba(14, 28, 41, 0.4),
-    0 0px 4px rgba(94, 120, 143, 0.3);
+    text-shadow:
+      0 0px 24px rgba(14, 28, 41, 0.4),
+      0 0px 4px rgba(94, 120, 143, 0.3);
+
+    .underline {
+      font-weight: bold;
+    }
+  }
+
+  .sub-punchline {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+
+  .down-arrow {
+    width: 40px
+  }
 }
 
 .cta-button {
@@ -76,14 +91,6 @@ header .title {
   font-family: "Figtree", sans-serif;
 }
 
-.hero-layout .punchline .underline {
-  /* background-image: url("img/underline.svg");
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-  background-size: auto; */
-  /* font-style: italic; */
-  font-weight: bold;
-}
 
 .splide,
 .splide__track,
@@ -92,63 +99,51 @@ header .title {
   overflow: visible !important;
 }
 
-
-
-.hero-layout .sub-punchline {
-  font-size: 1.2rem;
-  padding: 1rem 0;
-}
-
-.hero-layout .down-arrow {
-  width: 40px
-}
-
-
 section {
   padding: 3rem 0;
-}
 
-section h2 {
-  margin-bottom: 20px;
+  h2 {
+    margin-bottom: 20px;
+  }
 }
 
 .about-me {
   background-color: #f3F3F3;
   padding-left: 2rem;
   padding-right: 2rem;
-}
 
-.about-me .experience {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-}
+  >div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+  }
 
-.about-me>div {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  justify-content: center;
-}
+  .experience {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
 
-.about-me .experience * {
-  margin: 0;
-}
+    * {
+      margin: 0;
+    }
 
-.about-me .experience .main-number {
-  font-size: 2rem;
-  font-weight: 600;
-}
+    .main-number {
+      font-size: 2rem;
+      font-weight: 600;
+    }
 
-.about-me .experience .label {
-  font-size: 0.9rem;
-  margin: 0;
-}
+    .label {
+      font-size: 0.9rem;
+      margin: 0;
+    }
 
-.about-me .experience .description {
-  font-size: 0.9rem;
-  color: #5e788f;
+    .description {
+      font-size: 0.9rem;
+      color: #5e788f;
+    }
+  }
 }
 
 .main-title {
@@ -176,17 +171,17 @@ section h2 {
   margin-bottom: 50px;
 
   margin: 0 2rem;
-}
 
-.category-section h3 {
-  margin-bottom: 20px;
-}
+  h3 {
+    margin-bottom: 20px;
+  }
 
-.category-section .thumbnails-container {
-  /* display in grid with 3 columns and 20px gap */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  .thumbnails-container {
+    /* display in grid with 3 columns and 20px gap */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 footer {
@@ -198,30 +193,31 @@ footer {
   width: 100vw;
 
   border-radius: 5px 5px 0 0;
-}
 
-footer .name {
-  font-family: "Instrument Serif", serif;
-  font-weight: 400;
-  font-size: 2rem;
+  .name {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
 }
 
 .contact-logos {
   display: flex;
   gap: 20px;
   justify-content: center;
-}
 
-.contact-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  .contact-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
-  text-decoration: none;
-  color: black;
-}
+    text-decoration: none;
+    color: black;
 
-.contact-logo img {
-  width: 90px;
+    img {
+      width: 90px;
+    }
+  }
 }

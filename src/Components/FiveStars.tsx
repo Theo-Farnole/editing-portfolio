@@ -1,4 +1,4 @@
-import './FiveStars.css'
+import './FiveStars.scss'
 
 
 function FiveStars() {

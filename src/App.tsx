@@ -1,6 +1,6 @@
 import instagramLogo from './assets/instagram.svg'
 import maltLogo from './assets/malt.png'
-import './App.css'
+import './App.scss'
 import Thumbnail from './Components/Thumbnail'
 import { allThumbnails, thumbnails } from './const'
 // @ts-expect-error - splide exports typings issue

@@ -1,5 +1,5 @@
 import type { ThumbnailData } from '../types'
-import './Thumbnail.css'
+import './Thumbnail.scss'
 
 
 
