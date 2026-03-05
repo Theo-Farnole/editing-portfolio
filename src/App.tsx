@@ -135,7 +135,7 @@ function App() {
             className='contact-logo'
           >
             <img src={instagramLogo} />
-            <div>@theo.gweron</div>
+            <div>Instagram</div>
           </a>
 
           <a
