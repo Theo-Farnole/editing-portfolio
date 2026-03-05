@@ -6,6 +6,7 @@ import { allThumbnails, thumbnails } from './const'
 // @ts-expect-error - splide exports typings issue
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import AnimatedCounter from './Components/AnimatedCounter'
 
 /**
  * TODO :
@@ -103,19 +104,19 @@ function App() {
 
         <div>
           <div className='experience'>
-            <p className='main-number'>3+</p>
+            <AnimatedCounter end={3} duration={2} className="main-number" />
             <p className='label'>Années d'expérience</p>
             <p className='description'>Je maîtrise les codes et les tendances de Youtube pour créer des vidéos qui performent.</p>
           </div>
 
           <div className='experience'>
-            <p className='main-number'>999</p>
+            <AnimatedCounter end={999} duration={1.5} className="main-number" />
             <p className='label'>vidéos montées</p>
             <p className='description'>Des formats longs pensés pour performer.</p>
           </div>
 
           <div className='experience'>
-            <p className='main-number'>999 999</p>
+            <AnimatedCounter end={999999} duration={1} className="main-number" />
             <p className='label'>vues cumulées</p>
             <p className='description'>Des vidéos conçues pour maximiser le watch time et le taux de clic.</p>
           </div>
