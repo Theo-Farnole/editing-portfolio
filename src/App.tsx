@@ -1,11 +1,10 @@
-// import reactLogo from './assets/react.svg'
+import instagramLogo from './assets/instagram.svg'
+import maltLogo from './assets/malt.png'
 import './App.css'
-import ClientOpinion from './Components/ClientOpinion';
 import Thumbnail from './Components/Thumbnail'
-import { allThumbnails, clientsOpinion, thumbnails } from './const'
+import { allThumbnails, thumbnails } from './const'
 // @ts-expect-error - splide exports typings issue
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 /**
@@ -124,7 +123,34 @@ function App() {
       </section >
 
 
-      <section className='reviews no-body-padding'>
+      <section className='contact no-body-padding'>
+        <h2>Me contacter</h2>
+
+        <div className='contact-logos'>
+          <a
+            href="https://www.instagram.com/theo.gweron/"
+            target="_blank" // Optionnel : ouvre le lien dans un nouvel onglet
+            rel="noopener noreferrer"
+            className='contact-logo'
+          >
+            <img src={instagramLogo} />
+            <div>@theo.gweron</div>
+          </a>
+
+          <a
+            href="https://www.malt.fr/profile/theofarnole"
+            target="_blank" // Optionnel : ouvre le lien dans un nouvel onglet
+            rel="noopener noreferrer"
+            className='contact-logo'>
+            <img src={maltLogo} />
+            <div>Malt</div>
+          </a>
+        </div>
+
+
+      </section>
+
+      {/* <section className='reviews no-body-padding'>
         <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
           {
             clientsOpinion.map((t) =>
@@ -134,7 +160,7 @@ function App() {
             )
           }
         </Splide>
-      </section>
+      </section> */}
 
       <section className='categories'>
 

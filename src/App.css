@@ -167,6 +167,8 @@ section h2 {
   display: flex;
   flex-direction: column;
   gap: 50px;
+
+  background-color: #f3F3F3;
 }
 
 .category-section {
@@ -202,4 +204,24 @@ footer .name {
   font-family: "Instrument Serif", serif;
   font-weight: 400;
   font-size: 2rem;
+}
+
+.contact-logos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: black;
+}
+
+.contact-logo img {
+  width: 90px;
 }
