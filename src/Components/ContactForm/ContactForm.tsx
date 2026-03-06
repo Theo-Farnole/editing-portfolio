@@ -93,7 +93,7 @@ const ContactForm: React.FC = () => {
         setIsSubmitting(true);
         try {
             // Remplace par ton endpoint Formspree ou backend
-            const response = await fetch('https://formspree.io/f/TON_ID_DE_FORM', {
+            const response = await fetch('https://formspree.io/f/xlgpenor', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
