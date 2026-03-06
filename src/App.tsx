@@ -1,5 +1,3 @@
-import instagramLogo from './assets/instagram.svg'
-import maltLogo from './assets/malt.png'
 import './App.scss'
 import Thumbnail from './Components/Thumbnail'
 import { allThumbnails, thumbnails } from './const'

@@ -94,6 +94,7 @@ h3 {
       #d6e6f2,
       #8fb3cc);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
