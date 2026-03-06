@@ -81,9 +81,9 @@ function App() {
             Plus de rétention. Plus de croissance.
           </p>
 
-          <button className='cta-button'>
+          <a href="#contact" className='cta-button'>
             Discuter de mon projet
-          </button>
+          </a>
 
           <img className="down-arrow" src="img/down-arrow.png" />
         </div>
@@ -126,7 +126,7 @@ function App() {
       </section >
 
 
-      <section className='contact no-body-padding'>
+      <section id="contact" className='contact no-body-padding'>
         <h2>Discutons de votre projet</h2>
 
         <ContactForm />
