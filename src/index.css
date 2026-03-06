@@ -34,6 +34,12 @@ body {
   margin: 0;
 }
 
+textarea,
+input[type=text] {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", serif;
+}
+
 body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-family: "Inter", serif;

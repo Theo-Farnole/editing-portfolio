@@ -117,7 +117,7 @@ const ContactForm: React.FC = () => {
         <div className={styles.contactFormContainer}>
             <form onSubmit={handleSubmit} className={styles.contactForm} noValidate>
                 <div className={styles.formGroup}>
-                    <label htmlFor="email">Email*</label>
+                    <label htmlFor="email">Email</label>
                     <input
                         type="email"
                         id="email"
@@ -126,13 +126,14 @@ const ContactForm: React.FC = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         className={`${styles.formInput} ${formErrors.email && (touched.email || isSubmitted) ? styles.errorInput : ''}`}
+                        placeholder="votre@email.com"
                     />
                     {formErrors.email && (touched.email || isSubmitted) && (
                         <span className={styles.errorMessage}>{formErrors.email}</span>
                     )}
                 </div>
                 <div className={styles.formGroup}>
-                    <label htmlFor="nom">Nom*</label>
+                    <label htmlFor="nom">Nom</label>
                     <input
                         type="text"
                         id="nom"
@@ -141,13 +142,14 @@ const ContactForm: React.FC = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         className={`${styles.formInput} ${formErrors.nom && (touched.nom || isSubmitted) ? styles.errorInput : ''}`}
+                        placeholder="Votre nom"
                     />
                     {formErrors.nom && (touched.nom || isSubmitted) && (
                         <span className={styles.errorMessage}>{formErrors.nom}</span>
                     )}
                 </div>
                 <div className={styles.formGroup}>
-                    <label htmlFor="sujet">Sujet*</label>
+                    <label htmlFor="sujet">Sujet</label>
                     <input
                         type="text"
                         id="sujet"
@@ -163,7 +165,7 @@ const ContactForm: React.FC = () => {
                     )}
                 </div>
                 <div className={styles.formGroup}>
-                    <label htmlFor="message">Message*</label>
+                    <label htmlFor="message">Message</label>
                     <textarea
                         id="message"
                         name="message"
@@ -171,6 +173,7 @@ const ContactForm: React.FC = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         className={`${styles.formTextarea} ${formErrors.message && (touched.message || isSubmitted) ? styles.errorInput : ''}`}
+                        placeholder="Votre message"
                     />
                     {formErrors.message && (touched.message || isSubmitted) && (
                         <span className={styles.errorMessage}>{formErrors.message}</span>
