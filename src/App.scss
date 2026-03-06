@@ -183,6 +183,12 @@ section {
       @media (min-width: 768px) {
         grid-template-columns: repeat(3, 1fr); // 3 colonnes sur desktop
       }
+
+      @media (min-width: 1440px) {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1600px;
+        margin: 0 auto;
+      }
     }
   }
 }
