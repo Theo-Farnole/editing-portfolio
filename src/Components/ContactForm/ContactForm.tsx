@@ -148,22 +148,19 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="sujet">Sujet*</label>
-                    <select
+                    <input
+                        type="text"
                         id="sujet"
                         name="sujet"
                         value={formData.sujet}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        className={`${styles.formSelect} ${formErrors.sujet && (touched.sujet || isSubmitted) ? styles.errorInput : ''}`}
-                    >
-                        <option value="">-- Sélectionnez un sujet --</option>
-                        <option value="Montage clip musical">Montage clip musical</option>
-                        <option value="Montage publicitaire">Montage publicitaire</option>
-                        <option value="Montage documentaire">Montage documentaire</option>
-                        <option value="Demande de devis">Demande de devis</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                    {formErrors.sujet && <span className={styles.errorMessage}>{formErrors.sujet}</span>}
+                        className={`${styles.formInput} ${formErrors.sujet && (touched.sujet || isSubmitted) ? styles.errorInput : ''}`}
+                        placeholder="Décrivez votre sujet"
+                    />
+                    {formErrors.sujet && (touched.sujet || isSubmitted) && (
+                        <span className={styles.errorMessage}>{formErrors.sujet}</span>
+                    )}
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="message">Message*</label>
