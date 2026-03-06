@@ -7,6 +7,7 @@ import { allThumbnails, thumbnails } from './const'
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import AnimatedCounter from './Components/AnimatedCounter'
+import ContactForm from './Components/ContactForm/ContactForm'
 
 /**
  * TODO :
@@ -126,30 +127,9 @@ function App() {
 
 
       <section className='contact no-body-padding'>
-        <h2>Me contacter</h2>
+        <h2>Discutons de votre projet</h2>
 
-        <div className='contact-logos'>
-          <a
-            href="https://www.instagram.com/theo.gweron/"
-            target="_blank" // Optionnel : ouvre le lien dans un nouvel onglet
-            rel="noopener noreferrer"
-            className='contact-logo'
-          >
-            <img src={instagramLogo} />
-            <div>Instagram</div>
-          </a>
-
-          <a
-            href="https://www.malt.fr/profile/theofarnole"
-            target="_blank" // Optionnel : ouvre le lien dans un nouvel onglet
-            rel="noopener noreferrer"
-            className='contact-logo'>
-            <img src={maltLogo} />
-            <div>Malt</div>
-          </a>
-        </div>
-
-
+        <ContactForm />
       </section>
 
       {/* <section className='reviews no-body-padding'>
