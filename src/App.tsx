@@ -104,7 +104,7 @@ function App() {
 
         <div>
           <div className='experience'>
-            <AnimatedCounter end={2} duration={2} className="main-number" />
+            <AnimatedCounter end={3} duration={2} className="main-number" />
             <p className='label'>Années d'expérience</p>
             <p className='description'>Je maîtrise les codes et les tendances de Youtube pour créer des vidéos qui performent.</p>
           </div>
