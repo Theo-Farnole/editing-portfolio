@@ -64,7 +64,7 @@ function App() {
   return (
     <>
       <header>
-        <p className='title'>Gweron</p>
+        <p className='title'>Théo Farnole</p>
       </header>
 
       <div className="fullpage">
@@ -158,7 +158,7 @@ function App() {
       </section>
 
       <footer>
-        <p className="name">Gweron</p>
+        <p className="name">Théo Farnole</p>
       </footer>
     </>
   )
