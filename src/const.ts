@@ -11,6 +11,7 @@ export const thumbnails: {
     cisse: ThumbnailData;
     etinMbb: ThumbnailData;
     thealFossiles: ThumbnailData;
+    juribleLune: ThumbnailData;
 } = {
     etinAsafa: {
         link: "https://www.youtube.com/watch?v=ch9TQ8KUuVU",
@@ -62,6 +63,11 @@ export const thumbnails: {
         link: "https://www.youtube.com/watch?v=DyxexYo2Khg",
         title: "Seul contre tous : l'histoire du coureur que personne n'aimait",
         thumbnail: "thumbnails/etin-mbb.jpg"
+    },
+    juribleLune: {
+        link: "https://www.youtube.com/watch?v=CBPf2ayr0sc",
+        title: "La LUNE : le prochain territoire américain ?",
+        thumbnail: "thumbnails/jurible-lune.jpg"
     }
 }
 

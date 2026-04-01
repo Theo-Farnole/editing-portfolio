@@ -28,9 +28,10 @@ function App() {
       thumbnails.thealTalharpa,
       thumbnails.thealFossiles
     ],
-    "Storytelling": [
+    "Facecam": [
       thumbnails.etinAsafa,
-      thumbnails.etinMbb
+      thumbnails.etinMbb,
+      thumbnails.juribleLune
     ],
     "Vlog": [
       thumbnails.cisse,
