@@ -28,7 +28,7 @@ function App() {
       thumbnails.thealTalharpa,
       thumbnails.thealFossiles
     ],
-    "Facecam": [
+    "Educatif": [
       thumbnails.etinAsafa,
       thumbnails.etinMbb,
       thumbnails.juribleLune
