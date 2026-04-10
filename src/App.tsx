@@ -1,6 +1,6 @@
 import './App.scss'
 import Thumbnail from './Components/Thumbnail'
-import { thumbnails } from './const'
+import { thumbnails } from './data/thumbnails'
 // @ts-expect-error - splide exports typings issue
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
