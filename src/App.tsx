@@ -29,14 +29,6 @@ function App() {
     return order.map((name) => [name, byCategory.get(name)!] as const)
   })()
 
-  const displayedCount = mesRealisations.reduce((n, [, items]) => n + items.length, 0)
-  if (displayedCount !== allThumbnails.length) {
-    console.warn("Tous les thumbnails ne sont pas catégorisés !")
-    const displayed = new Set(mesRealisations.flatMap(([, items]) => items))
-    const uncategorizedThumbnails = allThumbnails.filter((t) => !displayed.has(t))
-    console.warn("Thumbnails non catégorisés :", uncategorizedThumbnails)
-  }
-
   // @ts-ignore
   const splideOptions = {
     type: "loop", // Loop back to the beginning when reaching the end
