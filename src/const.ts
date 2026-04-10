@@ -70,8 +70,6 @@ export const thumbnails: ThumbnailData[] = [
     }
 ];
 
-export const allThumbnails: ThumbnailData[] = thumbnails;
-
 export const clientsOpinion: ClientOpinionData[] = [
     /* TODO Johann, Laura */
     {

@@ -1,6 +1,6 @@
 import './App.scss'
 import Thumbnail from './Components/Thumbnail'
-import { allThumbnails, thumbnails } from './const'
+import { thumbnails } from './const'
 // @ts-expect-error - splide exports typings issue
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
@@ -73,7 +73,7 @@ function App() {
       {/* 
       <Splide className="thumbnail-carousel no-body-padding" options={splideOptions} extensions={{ AutoScroll }}>
         {
-          allThumbnails.map((t) =>
+          thumbnails.map((t) =>
             <SplideSlide key={t.link}>
               <Thumbnail {...t} />
             </SplideSlide>
