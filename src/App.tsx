@@ -1,6 +1,6 @@
 import './App.scss'
 import Thumbnail from './Components/Thumbnail'
-import { thumbnails } from './data/thumbnails'
+import { thumbnailsByCategory } from './data/thumbnails'
 // @ts-expect-error - splide exports typings issue
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
@@ -15,19 +15,6 @@ import ContactForm from './Components/ContactForm/ContactForm'
  */
 
 function App() {
-
-  const mesRealisations = (() => {
-    const byCategory = new Map<string, typeof thumbnails>()
-    const order: string[] = []
-    for (const t of thumbnails) {
-      if (!byCategory.has(t.category)) {
-        order.push(t.category)
-        byCategory.set(t.category, [])
-      }
-      byCategory.get(t.category)!.push(t)
-    }
-    return order.map((name) => [name, byCategory.get(name)!] as const)
-  })()
 
   // @ts-ignore
   const splideOptions = {
@@ -128,7 +115,7 @@ function App() {
 
         <h2>Mes réalisations</h2>
         {
-          mesRealisations.map(([categoryName, categoryThumbnails]) => (
+          thumbnailsByCategory.map(([categoryName, categoryThumbnails]) => (
             <div key={categoryName} className="category-section">
               <h3>{categoryName}</h3>
               <div className="thumbnails-container">

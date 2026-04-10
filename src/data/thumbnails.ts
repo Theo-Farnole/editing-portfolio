@@ -69,3 +69,17 @@ export const thumbnails: ThumbnailData[] = [
         thumbnail: "thumbnails/cise.jpg"
     }
 ];
+
+/** Category label and items, in order of first appearance in `thumbnails`. */
+export const thumbnailsByCategory: readonly (readonly [string, ThumbnailData[]])[] = (() => {
+    const byCategory = new Map<string, ThumbnailData[]>();
+    const order: string[] = [];
+    for (const t of thumbnails) {
+        if (!byCategory.has(t.category)) {
+            order.push(t.category);
+            byCategory.set(t.category, []);
+        }
+        byCategory.get(t.category)!.push(t);
+    }
+    return order.map((name) => [name, byCategory.get(name)!] as const);
+})();
