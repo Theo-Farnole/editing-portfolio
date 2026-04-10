@@ -2,6 +2,7 @@ export type ThumbnailData = {
     title: string;
     link: string;
     thumbnail: string;
+    category: string;
 };
 
 

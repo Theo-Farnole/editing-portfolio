@@ -16,36 +16,25 @@ import ContactForm from './Components/ContactForm/ContactForm'
 
 function App() {
 
-  const mesRealisations = {
-    "Jeux multicam": [
-      thumbnails.tasawarLahifa,
-      thumbnails.tasawarNaim
-    ],
-    "Outdoor": [
-      thumbnails.thealKayak,
-      thumbnails.manu,
-      thumbnails.coraille,
-      thumbnails.thealTalharpa,
-      thumbnails.thealFossiles
-    ],
-    "Educatif": [
-      thumbnails.etinAsafa,
-      thumbnails.etinMbb,
-      thumbnails.juribleLune
-    ],
-    "Vlog": [
-      thumbnails.cisse,
-      // TODO l'univers de marie
-    ],
-  }
+  const mesRealisations = (() => {
+    const byCategory = new Map<string, typeof thumbnails>()
+    const order: string[] = []
+    for (const t of thumbnails) {
+      if (!byCategory.has(t.category)) {
+        order.push(t.category)
+        byCategory.set(t.category, [])
+      }
+      byCategory.get(t.category)!.push(t)
+    }
+    return order.map((name) => [name, byCategory.get(name)!] as const)
+  })()
 
-  if (Object.values(mesRealisations).flat().length != allThumbnails.length) {
+  const displayedCount = mesRealisations.reduce((n, [, items]) => n + items.length, 0)
+  if (displayedCount !== allThumbnails.length) {
     console.warn("Tous les thumbnails ne sont pas catégorisés !")
-
-    // Affiche les thumbnails non catégorisés
-    const categorizedThumbnails = new Set(Object.values(mesRealisations).flat());
-    const uncategorizedThumbnails = allThumbnails.filter(t => !categorizedThumbnails.has(t));
-    console.warn("Thumbnails non catégorisés :", uncategorizedThumbnails);
+    const displayed = new Set(mesRealisations.flatMap(([, items]) => items))
+    const uncategorizedThumbnails = allThumbnails.filter((t) => !displayed.has(t))
+    console.warn("Thumbnails non catégorisés :", uncategorizedThumbnails)
   }
 
   // @ts-ignore
@@ -147,11 +136,11 @@ function App() {
 
         <h2>Mes réalisations</h2>
         {
-          Object.entries(mesRealisations).map(([categoryName, thumbnails]) => (
+          mesRealisations.map(([categoryName, categoryThumbnails]) => (
             <div key={categoryName} className="category-section">
               <h3>{categoryName}</h3>
               <div className="thumbnails-container">
-                {thumbnails.map(t => <Thumbnail key={t.link} {...t} />)}
+                {categoryThumbnails.map(t => <Thumbnail key={t.link} {...t} />)}
               </div>
             </div>
           ))
